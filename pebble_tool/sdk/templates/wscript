@@ -21,6 +21,9 @@ def configure(ctx):
     Universal configuration: add your change prior to calling ctx.load('pebble_sdk').
     """
     ctx.load('pebble_sdk')
+    # uncomment when Pebble SDK contains WAF version >= 1.8.0
+    # this enables auto-completion if clangd is used https://clangd.llvm.org/installation
+    # ctx.load('clang_compilation_database')
 
 
 def build(ctx):
